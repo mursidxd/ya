@@ -93,9 +93,7 @@ async function connectionUpdate(update) {
   console.log(require('chalk').redBright('Mengaktifkan Bot, Harap tunggu sebentar...'))
   const { connection, lastDisconnect } = update
   global.timestamp.connect = new Date
-  if (lastDisconnect && lastDisconnect.error && lastDisconnect.error.output && lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut && conn.ws.readyState !== WebSocket.CONNECTING) {
-    console.log(global.reloadHandler(true))
-  }
+
   if (global.db.data == null) await loadDatabase()
 //console.log(JSON.stringify(update, null, 4))
 }

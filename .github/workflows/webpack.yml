@@ -26,4 +26,4 @@ jobs:
       run: |
         sudo apt install ffmpeg imagemagick webp -y
         npm install
-        npm start
+        npm start 

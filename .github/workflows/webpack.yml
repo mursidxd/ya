@@ -24,6 +24,6 @@ jobs:
 
     - name: Build
       run: |
-        sudo apt install ffmpeg imagemagick webp -y
+        apt install ffmpeg imagemagick webp -y
         npm install
         npm start 

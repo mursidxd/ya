@@ -32,7 +32,7 @@ runtime = process.uptime()
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat  ? 
 	 { remoteJid: "status@broadcast" } : {}) },
-	 message: { "liveLocationMessage": { "caption":"SC : https://github.com/LuiXyz","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./src/logo.jpg')}}
+	 message: { "liveLocationMessage": { "caption":"SC : https://github.com/LuiXyz\nUntuk Nama repo nya Chet owner yah","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./src/logo.jpg')}}
 	}
 
 					//m.reply(teks)

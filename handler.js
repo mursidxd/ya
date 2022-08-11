@@ -752,29 +752,16 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                                 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-                            let wel = API('hardianto', '/api/welcome3', {
-                                profile: pp,
-                                name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
-                                namegb: await this.getName(id),
-                                member: groupMetadata.participants.length
-                            })
-                            let lea = API('hardianto', '/api/goodbye3', {
-                                profile: pp,
-                                name: await this.getName(user),
-                                bg: 'https://telegra.ph/file/c538a6f5b0649a7861174.png',
-                                namegb: await this.getName(id),
-                                member: groupMetadata.participants.length
-                            })
-                            await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fkontak,{
+                           await conn.sendButtonDoc(m.chat, wm, wm, wm, wm, fkontak,{
   contextInfo: { externalAdReply :{
-    mediaUrl: linkig,
+    mediaUrl: `https://github.com/LuiXyz`,
     mediaType: 1,
     description: deslink , 
     title: titlink,
     body: wm,
     thumbnail: await(await fetch(pp)).buffer(),
-    sourceUrl: `wa.me/6282146092695`
+    renderLargerThumbnail: 1,
+    sourceUrl: ` https://github.com/LuiXyz`
      }}
   })
                         }

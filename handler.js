@@ -752,7 +752,7 @@ module.exports = {
                         } finally {
                             text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc ? String.fromCharCode(8206).repeat(4001) + groupMetadata.desc : '') :
                                 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace(/@user/g, '@' + user.split`@`[0])
-                           await conn.sendButtonDoc(m.chat, wm, wm, wm, wm, fkontak,{
+                            await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fkontak,{
   contextInfo: { externalAdReply :{
     mediaUrl: `https://github.com/LuiXyz`,
     mediaType: 1,

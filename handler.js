@@ -769,12 +769,12 @@ module.exports = {
                             await conn.sendButtonDoc(id, text, wm, action == 'add' ? 'selamat datang' : 'sampai jumpa', action === 'add' ? '.intro' : 'the.sad.boy01', fkontak,{
   contextInfo: { externalAdReply :{
     mediaUrl: linkig,
-    mediaType: 2,
+    mediaType: 1,
     description: deslink , 
     title: titlink,
     body: wm,
-    thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
-    sourceUrl: linkgc
+    thumbnail: await(await fetch(pp)).buffer(),
+    sourceUrl: `wa.me/6282146092695`
      }}
   })
                         }

@@ -49,14 +49,14 @@ Hai, %name! 👋
   body: '│ • %cmd %islimit %isPremium',
   footer: '╰────\n',
   after: `
-*NdaaBotz-MD@^%version*
+*BotzMD@^%version*
 ${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let { exp, limit, level, role } = global.db.data.users[m.sender]
+    let { exp, limit, level, role } = global.db.data.home[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -93,8 +93,8 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
-    let totalreg = Object.keys(global.db.data.users).length
-    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    let totalreg = Object.keys(global.db.data.home).length
+    let rtotalreg = Object.values(global.db.data.home).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
       return {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
@@ -138,7 +138,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       p: _p, uptime, muptime,
       me: conn.user.name,
       npmname: package.name,
-      npmdesc: package.description,
+      npmdes package.description,
       version: package.version,
       exp: exp - min,
       maxexp: xp,
@@ -149,18 +149,17 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-conn.relayMessage(m.chat, 
-{ liveLocationMessage: {
-  degreesLatitude: 0,
-  degreesLongitude: 0,
-  accuracyInMeters: 0,
-degreesClockwiseFromMagneticNorth: 2,
-caption: text.trim(),
-sequenceNumber: 2,
-timeOffset: 3,
-jpegThumbnail: thumb, 
-contextInfo: m,
-}}, {})
+   await conn.send2ButtonDoc(m.chat, `Dont spam Bot !!`, text.trim(), `Owner`, `.owner`, `Sumbangan`, `.donate`, fkontak,{
+ contextInfo:  { 
+ externalAdReply :{
+    mediaUrl: `https://github.com/LuiXyz`,
+    mediaType: 1,
+    title: ucapan,
+    thumbnail: await(await fetch('https://telegra.ph/file/445627a473ad55c03b34b.jpg')).buffer(),
+    renderLargerThumbnail: true,
+    sourceUrl: ``
+     }}
+    })
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

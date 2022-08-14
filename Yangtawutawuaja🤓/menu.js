@@ -49,7 +49,7 @@ Hai, %name! 👋
   body: '│ • %cmd %islimit %isPremium',
   footer: '╰────\n',
   after: `
-*BotzMD@^%version*
+*NdaaBotz-MD@^%version*
 ${'```%npmdesc```'}
 `,
 }
@@ -149,17 +149,18 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-   await conn.send2ButtonDoc(m.chat, `Dont spam Bot !!`, text.trim(), `Owner`, `.owner`, `Sumbangan`, `.donate`, fkontak,{
- contextInfo:  { 
- externalAdReply :{
-    mediaUrl: `https://github.com/LuiXyz`,
-    mediaType: 1,
-    title: ucapan,
-    thumbnail: await(await fetch('https://telegra.ph/file/445627a473ad55c03b34b.jpg')).buffer(),
-    renderLargerThumbnail: true,
-    sourceUrl: ``
-     }}
-    })
+conn.relayMessage(m.chat, 
+{ liveLocationMessage: {
+  degreesLatitude: 0,
+  degreesLongitude: 0,
+  accuracyInMeters: 0,
+degreesClockwiseFromMagneticNorth: 2,
+caption: text.trim(),
+sequenceNumber: 2,
+timeOffset: 3,
+jpegThumbnail: thumb, 
+contextInfo: m,
+}}, {})
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

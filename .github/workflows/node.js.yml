@@ -26,6 +26,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: sudo apt install ffmpeg imagemagick webp -y
-    - run: npm i
-    - run: npm start
+    - run: wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && sudo bash install.sh aapanel

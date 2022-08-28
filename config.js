@@ -5,7 +5,7 @@ global.tempatnye = JSON.parse(fs.readFileSync('./src/tempatnye.json'))
 global.thumbt = global.img
 global.fsx = 999999999999
 global.kontak = [
-['14157614750', 'AhmdLui 🥶🥶', 'AhmdLui', 'ayonimasangat@gmail.com', true]
+['6288233832771', 'Mursid S', 'Developer Bot WhatsApp', 'mursids@gmail.com', true]
 
 ]
 global.APIs = { // API Prefix
@@ -37,12 +37,12 @@ global.APIKeys = { // APIKey Here
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
 
-global.wm = 'Bot-Md 𝑩𝒚 Lui-sama'
-global.linkgc = 'https://chat.whatsapp.com/CnQV9lNcHuIENb8SQ9CaYP'
-global.linkig = 'https://www.instagram.com/ahmdlui'
+global.wm = 'мυʀѕι∂ вσт-χмℓ'
+global.linkgc = 'https://chat.whatsapp.com/FhSBFvhtzfN5hIVe1GXAfj'
+global.linkig = 'https://www.instagram.com/mursid.st'
 global.deslink = ''
-global.titlink = 'Folllow me on Instagram'
-global.bodlink = '@ahmdlui'
+global.titlink = 'ɪɴsᴛᴀɢʀᴀᴍ'
+global.bodlink = '@mursid.st'
 
 global.wait = '_*𝐬𝐞𝐝𝐚𝐧𝐠 𝐝𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 ...*_'
 global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
@@ -51,19 +51,19 @@ global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
 
 
 //========Url Template Buttons==========//
-global.dtu = '𝑭𝒐𝒍𝒍𝒐𝒘'
-global.urlnya = "https://www.instagram.com/ahmdlui"
+global.dtu = 'ғᴏʟʟᴏᴡ'
+global.urlnya = "https://www.instagram.com/mursid.st"
 
 //============= callButtons ============//
-global.dtc = '𝒄𝒂𝒍𝒍 𝒐𝒘𝒏𝒆𝒓'
-global.phn = '+62 895-3362-82144'
+global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
+global.phn = '+62 882-3383-2771'
 
 //========== Tampilan Bot =============//
-global.sa = '╭─'
-global.gx = '│✇'
+global.sa = '┌───────⬣'
+global.gx = '│•'
 global.gy = '│•'
 global.gz = '│'
-global.sb = '╰────࿐'
+global.sb = '└───────⬣'
 global.kki = '「'
 global.kka = '」'
 global.zt = '*'
